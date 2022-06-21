@@ -35,6 +35,9 @@ This is a work in progress, so there is a lot functionalities that can be added 
 # How to Run
 Step-by-step guide to use the app...
 
+<h2 align=center> <a href="https://jlulloaa.github.io/count_words">:scroll: Play with the app to count words :books: </a> </h2>
+
+
 # Roadmap of future improvements
 * Add the option to count characters with/without spaces
 * Add some intelligence to provide synonyms to highgly repeated words (it requires language support, either manual or automatic)
