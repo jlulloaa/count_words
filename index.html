@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- responsive viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PacMen Factory">
+    
+    <title>Word Counter</title>
+    <!-- iSANDEx favicons -->
+    <link href="assets/img/isandex_favicon.png" rel="icon" >
+    <link href="assets/img/isandex_favicon.png" rel="apple-touch-icon">
+    
+    <!-- Bootstrap theme Spacelab () -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/styles.css"> -->
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">      
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="https://jlulloaa.github.io/count_words">Home
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/jlulloaa/count_words" target="_blank"">Repository</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+            <a class="navbar-brand" href="https://isandex.com" target="_blank"><img src="assets/img/isandex_icon.png" height="60px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <h1>Word Counter</h1>
+        <h2> A simple tool to count words occurrence in a text</h2>
+        <div>
+            <div>
+                <form>
+                    <div class="form-group">
+                        <label for="textArea" class="form-label mt-4">Add text to process:</label>
+                        <textarea class="form-control" id="textArea" rows="3" style="height: 131px;"></textarea>
+                    </div>
+                    <br>
+                    <div>
+                        <button type="button" class="btn btn-primary" onclick="countWords()">Count Words</button>
+                        <button type="button" class="btn btn-secondary" onclick="resetArea()">Reset Text Area</button>
+                    </div>      
+                </form>
+            </div>
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Count of words in the text:
+                    <span class="badge bg-primary rounded-pill" id="countOfWords"></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Most repeated word:
+                    <span class="badge bg-primary rounded-pill" id="mostRepeatedWord"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="wordTableRoot"></div>
+    </div>
+    <br>
+    <div class="col-md-3">
+        <footer>
+            <div class="col">
+                <a href="https://github.com/jlulloaa/count_words/blob/main/LICENSE" target="_blank"> 
+                    <img alt="GitHub" src="https://img.shields.io/github/license/jlulloaa/count_words?color=green&logo=github&style=social">
+                </a>
+            </div>
+        </footer>
+    </div>
+    
+    </div>
+
+    <!-- Here the magic happens -->
+    <script src="assets/js/wordcount.js"></script>
+</body>
+
+</html>
