@@ -23,7 +23,7 @@
   <a href="#license-information">License</a>
 </p>
 
-<img alt="Screenshot" src="link_to_app_screenshot>">
+<img alt="Screenshot" src="assets/img/screenshot.png">
 
 # :open_book: Description
 Word Counter is a very simple application to count words in a text. It does not only count the number of words, but also provide a list with the most repeated words in the text. It is useful to identify possible redundancies within the text. 
