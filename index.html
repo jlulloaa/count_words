@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <!-- responsive viewport meta tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="PacMen Factory">
+    <meta name="description" content="Word counter App">
     
     <title>Word Counter</title>
     <!-- iSANDEx favicons -->
@@ -14,52 +14,65 @@
     
     <!-- Bootstrap theme Spacelab () -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-    <!-- <link rel="stylesheet" type="text/css" href="assets/css/styles.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">      
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="https://jlulloaa.github.io/count_words">Home
-                  <span class="visually-hidden">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://github.com/jlulloaa/count_words" target="_blank">Repository</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-            </ul>
-            <a class="navbar-brand" href="https://isandex.com" target="_blank"><img alt="iSANDEx icon" src="assets/img/isandex_icon.png" height="60"></a>
+            <a class="navbar-brand" href="https://isandex.com" target="_blank"><img alt="iSANDEx icon" src="assets/img/isandex_icon.png" height="40"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://jlulloaa.github.io/count_words">
+                            Home
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/jlulloaa/count_words" target="_blank">
+                            Repository
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
-        <h1>Word Counter</h1>
-        <h2> A simple tool to count words occurrence in a text</h2>
-        <div>
-            <div>
+    <div class="container-fluid main">
+        <div class="row-cols-auto" id="header"><!-- Header -->
+            <h1>Word Counter</h1>
+            <h2> A simple tool to count words occurrence in a text</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
                 <form>
                     <div class="form-group">
                         <label for="textArea" class="form-label mt-4">Area to add the text to process (or copy and paste from somewhere else):</label>
                         <textarea class="form-control" id="textArea" rows="3" style="height: 131px;"></textarea>
                     </div>
-                    <br>
-                    <div>
-                        <button type="button" class="btn btn-primary" onclick="countWords()">Count Words</button>
-                        <button type="button" class="btn btn-secondary" onclick="resetArea()">Reset Text Area</button>
-                    </div>      
                 </form>
+                <br>
+                <div>
+                    <button type="button" class="btn btn-primary" onclick="countWords()">Count Words</button>
+                    <button type="button" class="btn btn-secondary" onclick="resetArea()">Reset Text Area</button>
+                </div>
             </div>
-            <div>
+            <div class="col-lg-1"></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
                 <ul class="list-group">
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                     Count of words in the text:
@@ -71,11 +84,14 @@
                     </li>
                 </ul>
             </div>
+            <div class="col-lg-1"></div>
         </div>
-        <div id="wordTableRoot"></div>
-    </div>
-    <br>
-    <div class="col-md-3">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4" id="wordTableRoot"></div>
+            <div class="col-lg-4"></div>
+        </div>
+        <br>
         <footer>
             <div class="col">
                 <a href="https://github.com/jlulloaa/count_words/blob/main/LICENSE" target="_blank"> 
