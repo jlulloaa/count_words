@@ -15,19 +15,22 @@ function countWords() {
   // Splits the string into an array of words
   // const words = array => array.split(" ");
   // After watching the solution video, the way to remove comas and full stops AFTER splitting the string, is by using MAP:
-  // - trail(): remove trailing spaces at the beginning and at the end
+  // - trim(): remove trailing spaces at the beginning and at the end
   // - split(" "): convert the string into an array of words
   // - replace(",", ""): Remove comas from each word
   // - replace(".", ""): Remove stops from each word
   const words = array => array.trim().split(" ").map(item => item.replace(",","")).map(item => item.replace(".", ""));
 
-  // Get the number of words in the text:
+   // Get the number of words in the text:
   let wordsArray = words(lorem);
+  // Remove any additional space (i.e. any double (or more) space between words is not removed with trim())
+  wordsArray = wordsArray.filter(Boolean);
+
+  console.log(wordsArray);
   if (wordsArray.length == 1 & wordsArray.includes('')) {
     wordsArray = [];
   }
   let nWords = wordsArray.length;
-  console.log(wordsArray);
 
   document.getElementById("countOfWords").textContent = nWords;
  
@@ -36,7 +39,7 @@ function countWords() {
   console.log(wordCount);
   console.log(!wordCount.length);
   if (wordCount.length) {
-    document.getElementById("mostRepeatedWord").textContent ="'" + wordCount[0][0] + '" ('+wordCount[0][1]+')';
+    document.getElementById("mostRepeatedWord").textContent ='"' + wordCount[0][0] + '" ('+wordCount[0][1]+')';
     printOutList(wordCount);
   }
 
