@@ -42,6 +42,7 @@ Step-by-step guide to use the app...
 * Add the option to count characters with/without spaces
 * Add some intelligence to provide synonyms to highgly repeated words (it requires language support, either manual or automatic)
 * Language support, in principle, it can be manually selected from a drop-down list
+* Treat words written in capital and small letters as the same (currently, *"Hello"* and *"hello"* are counted as different words)
 * ...
 
 # Contributing
