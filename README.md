@@ -52,4 +52,4 @@ Pull requests are welcome, and I'll be happy to chat about any improvement or ex
 This software uses the following third party tools:
 
 # License information
-This project is licensed under the terms of <a href="https://github.com/jlulloaa/eyes/blob/main/LICENSE" target="_blank"> MIT license </a>
+This project is licensed under the terms of <a href="https://github.com/jlulloaa/count_words/blob/main/LICENSE" target="_blank"> MIT license </a>
